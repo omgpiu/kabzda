@@ -1,26 +1,44 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, {useState} from 'react';
+import Rating, {RatingValueType} from "./comp/Accordeon/Rating/Rating";
+import RatingUncontroled from "./comp/Accordeon/Rating/RatingUncotroled";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+
+     let [ratingValue,setRatingValue] = useState<RatingValueType>(1)
+
+
+
+
+
+
+    return (
+        <div>
+
+            {/*<OnOff/>*/}
+            {/* eslint-disable-next-line react/jsx-no-undef */}
+            <RatingUncontroled/>
+            {/*<UncontrolledAccordeon titleValue={"Users"}/>*/}
+            {/*<UncontrolledAccordeon titleValue={"Menu"}/>*/}
+            {/*<PageTitle title={'Hello mazafuker'}/>*/}
+            {/*<Accordeon titleValue={"Users"} collapsed={false}/>*/}
+            {/*<Accordeon titleValue={"Menu"} collapsed={false}/>*/}
+
+            <Rating value={ratingValue} onClick={setRatingValue}/>
+
+
+        </div>
+    );
+};
+
+// type PageTitleProps = {
+//     title: string
+// }
+//
+// function PageTitle(props: PageTitleProps) {
+//     return (
+//         <div><h1>{props.title}</h1></div>
+//     )
+//
+// }
 
 export default App;
