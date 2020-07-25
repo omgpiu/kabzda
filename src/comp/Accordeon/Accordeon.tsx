@@ -5,11 +5,13 @@ import AccordeonTittle from "./accordeonTitle";
 type AccordeonTypes = {
     titleValue: string
     collapsed?: boolean
+    onChange: ()=>void
 }
 
-function Accordeon(props: AccordeonTypes) {
+export function Accordeon(props: AccordeonTypes) {
     return (<div>
-            <AccordeonTittle title={props.titleValue}/>
+            <AccordeonTittle title={props.titleValue}
+            onChange={props.onChange}/>
             {!props.collapsed&& <AccordeonBody/>}
         </div>
     )
@@ -17,4 +19,4 @@ function Accordeon(props: AccordeonTypes) {
 
 }
 
-export default Accordeon;
+

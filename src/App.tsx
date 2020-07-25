@@ -1,6 +1,8 @@
 import React, {useState} from 'react';
 import Rating, {RatingValueType} from "./comp/Accordeon/Rating/Rating";
 import RatingUncontroled from "./comp/Accordeon/Rating/RatingUncotroled";
+import {OnOff} from './comp/onOFF/onOff';
+
 
 function App() {
 
@@ -14,7 +16,7 @@ function App() {
     return (
         <div>
 
-            {/*<OnOff/>*/}
+            <OnOff on={true} onChange={x=>x}/>
             {/* eslint-disable-next-line react/jsx-no-undef */}
             <RatingUncontroled/>
             {/*<UncontrolledAccordeon titleValue={"Users"}/>*/}

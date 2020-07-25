@@ -3,6 +3,7 @@ import React from 'react';
 
 type  AccordeonTitleType = {
     title : string
+    onChange:()=>void
 
 }
 

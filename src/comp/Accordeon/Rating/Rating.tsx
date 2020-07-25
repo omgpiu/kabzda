@@ -37,7 +37,7 @@ type StarsProps = {
 
 
 function Star(props: StarsProps) {
-    return  <span onClick={()=>{props.onClick(props.value)}}> {props.selected ?  <b> star </b> : ' star'}</span>
+    return  <span onClick={()=>{props.onClick(props.value)}}> {props.selected ?  <b>  star  </b> : '  star'}</span>
 
 
 }
