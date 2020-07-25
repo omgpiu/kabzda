@@ -1,28 +1,28 @@
 import React, {useState} from 'react';
-import Rating, {RatingValueType} from "./comp/Accordeon/Rating/Rating";
-import RatingUncontroled from "./comp/Accordeon/Rating/RatingUncotroled";
+import Rating, {RatingValueType} from './comp/Accordeon/Rating/Rating';
+import RatingUncontroled from './comp/Accordeon/Rating/RatingUncotroled';
 import {OnOff} from './comp/onOFF/onOff';
+import {Accordeon} from './comp/Accordeon/Accordeon';
 
 
 function App() {
 
-     let [ratingValue,setRatingValue] = useState<RatingValueType>(1)
-
-
-
-
-
+    let [ratingValue, setRatingValue] = useState<RatingValueType>(1);
+    let [accordionCollapsed, setAccordionCollapsed] = useState<boolean>(false);
+    let [valueOn,setVelueOn] = useState<boolean>(false)
 
     return (
         <div>
 
-            <OnOff on={true} onChange={x=>x}/>
+            <OnOff on={valueOn} onChange={()=>{setVelueOn(!valueOn)}}/>
             {/* eslint-disable-next-line react/jsx-no-undef */}
             <RatingUncontroled/>
             {/*<UncontrolledAccordeon titleValue={"Users"}/>*/}
             {/*<UncontrolledAccordeon titleValue={"Menu"}/>*/}
             {/*<PageTitle title={'Hello mazafuker'}/>*/}
-            {/*<Accordeon titleValue={"Users"} collapsed={false}/>*/}
+            {/* eslint-disable-next-line react/jsx-no-undef */}
+            <Accordeon titleValue={'Users'} collapsed={accordionCollapsed}
+                       onChange={()=>{setAccordionCollapsed(!accordionCollapsed)}}/>
             {/*<Accordeon titleValue={"Menu"} collapsed={false}/>*/}
 
             <Rating value={ratingValue} onClick={setRatingValue}/>

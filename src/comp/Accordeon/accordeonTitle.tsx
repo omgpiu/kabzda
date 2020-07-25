@@ -3,14 +3,14 @@ import React from 'react';
 
 type  AccordeonTitleType = {
     title : string
-    onChange:()=>void
+    onChange: () => void
 
 }
 
 function AccordeonTittle(props: AccordeonTitleType) {
     return (
         <div>
-            <h1>{props.title}</h1>
+            <h1 onClick={props.onChange}>{props.title}</h1>
         </div>
 
 
