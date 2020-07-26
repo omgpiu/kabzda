@@ -2,10 +2,22 @@ import React from 'react';
 import AccordeonBody from './accordeonbody';
 import AccordeonTittle from './accordeonTitle';
 
+type ItemsType = {
+    title:string
+    value: any
+}
+
 type AccordeonTypes = {
     titleValue: string
     collapsed: boolean
     onChange: () => void
+    items: ItemsType[]
+    onClick: (value:any)=> void
+}
+
+export type AccordeonBodyType ={
+    items:ItemsType[]
+    onClick: (value:any)=> void
 }
 
 export function Accordeon(props: AccordeonTypes) {
@@ -14,7 +26,7 @@ export function Accordeon(props: AccordeonTypes) {
                              onChange={props.onChange}
 
             />
-            {!props.collapsed && <AccordeonBody/>}
+            {!props.collapsed && <AccordeonBody items={props.items} onClick={props.onClick}/>}
         </div>
     );
 

@@ -73,7 +73,7 @@ export const ControlledSelect = () => {
 
 
     </select>
-    // return <input type='radio' checked={parentValue} onChange={onChange}/>;
+
 };
 
 

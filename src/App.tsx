@@ -1,8 +1,8 @@
 import React, {useState} from 'react';
-import Rating, {RatingValueType} from './comp/Accordeon/Rating/Rating';
-import RatingUncontroled from './comp/Accordeon/Rating/RatingUncotroled';
+import Rating, {RatingValueType} from './Rating/Rating';
+import RatingUncontroled from './Rating/RatingUncotroled';
 import {OnOff} from './comp/onOFF/onOff';
-import {Accordeon} from './comp/Accordeon/Accordeon';
+import {Accordeon} from './Accordeon/Accordeon';
 
 
 function App() {
@@ -14,18 +14,7 @@ function App() {
     return (
         <div>
 
-            <OnOff on={switchOn} onChange={setSwitchOn}/>
-            {/* eslint-disable-next-line react/jsx-no-undef */}
-            <RatingUncontroled/>
-            {/*<UncontrolledAccordeon titleValue={"Users"}/>*/}
-            {/*<UncontrolledAccordeon titleValue={"Menu"}/>*/}
-            {/*<PageTitle title={'Hello mazafuker'}/>*/}
-            {/* eslint-disable-next-line react/jsx-no-undef */}
-            <Accordeon titleValue={'Users'} collapsed={accordionCollapsed}
-                       onChange={()=>{setAccordionCollapsed(!accordionCollapsed)}}/>
-            {/*<Accordeon titleValue={"Menu"} collapsed={false}/>*/}
-
-            <Rating value={ratingValue} onClick={setRatingValue}/>
+           hello
 
 
         </div>
