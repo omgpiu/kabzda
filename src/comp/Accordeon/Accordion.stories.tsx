@@ -10,15 +10,15 @@ export default {
     component: Accordeon,
 };
 
-const callback = action('on or off clicked')
+const callback = action('accordion mode change even fired')
 
-export const AccordeonCollapsed = () => <Accordeon titleValue={'Mama'} collapsed={false} onChange={callback}/>;
-export const AccordeonNotCollapsed = () => <Accordeon  titleValue={'Mama'} collapsed={true} onChange={callback}/>;
+export const AccordeonCollapsed = () => <Accordeon titleValue={'Accordeon'} collapsed={false} onChange={callback}/>;
+export const AccordeonNotCollapsed = () => <Accordeon  titleValue={'Accordeon'} collapsed={true} onChange={callback}/>;
 
 export const AccordeonChanging = ()=> {
 
     const [value, setValue] = useState<boolean>(true);
-    return <Accordeon titleValue={'Papa'} onChange={()=>{setValue(!value)}} collapsed={value}/>
+    return <Accordeon titleValue={'Accordeon'} onChange={()=>{setValue(!value)}} collapsed={value}/>
 
 }
 

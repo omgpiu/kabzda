@@ -10,7 +10,7 @@ type  AccordeonTitleType = {
 function AccordeonTittle(props: AccordeonTitleType) {
     return (
         <div>
-            <h1 onClick={props.onChange}>{props.title}</h1>
+            <h1 onClick={(e)=>props.onChange()}>{props.title}</h1>
         </div>
 
 

@@ -9,12 +9,12 @@ function App() {
 
     let [ratingValue, setRatingValue] = useState<RatingValueType>(1);
     let [accordionCollapsed, setAccordionCollapsed] = useState<boolean>(false);
-    let [valueOn,setVelueOn] = useState<boolean>(false)
+    let [switchOn,setSwitchOn] = useState<boolean>(false)
 
     return (
         <div>
 
-            <OnOff on={valueOn} onChange={()=>{setVelueOn(!valueOn)}}/>
+            <OnOff on={switchOn} onChange={setSwitchOn}/>
             {/* eslint-disable-next-line react/jsx-no-undef */}
             <RatingUncontroled/>
             {/*<UncontrolledAccordeon titleValue={"Users"}/>*/}

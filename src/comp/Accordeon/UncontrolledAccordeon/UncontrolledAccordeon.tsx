@@ -9,7 +9,7 @@ type AccordeonTypes = {
 }
 
 
-function UncontrolledAccordeon(props: AccordeonTypes) {
+export function UncontrolledAccordeon(props: AccordeonTypes) {
 
 
     let [collapsed,setCollapsed] = useState(false)
@@ -27,4 +27,3 @@ function UncontrolledAccordeon(props: AccordeonTypes) {
 
 }
 
-export default UncontrolledAccordeon;
