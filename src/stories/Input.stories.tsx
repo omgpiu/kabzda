@@ -1,4 +1,4 @@
-import React, {useRef, useState} from 'react';
+import React, {ChangeEvent, useRef, useState} from 'react';
 
 
 export default {
@@ -15,7 +15,7 @@ export const GetValueofUncontrolledInputByButtonPress = () => {
         const el = inputRef.current as HTMLInputElement;
 
         setValue(el.value);
-    }
+    };
     return <><input ref={inputRef}/>
         <button onClick={save}>Save
         </button>
@@ -27,11 +27,12 @@ export const GetValueofUncontrolledInputByButtonPress = () => {
 export const TrackValueOfUncontrolledInput = () => {
 // берем значения из инпута и передаем в стейт
     const [value, setValue] = useState('');
-    return <><input onChange={(event) => {
+    const onChange = (event:ChangeEvent<HTMLInputElement>) => {
         const actualValue = event.currentTarget.value;
-
         setValue(actualValue);
-    }
+    };
+
+    return <><input value={value} onChange={onChange
 
     }/> - {value}   </>;
 
