@@ -3,18 +3,18 @@ import Rating, {RatingValueType} from './Rating/Rating';
 import RatingUncontroled from './Rating/RatingUncotroled';
 import {OnOff} from './comp/onOFF/onOff';
 import {Accordeon} from './Accordeon/Accordeon';
+import {UncontrolledAccordeon} from './comp/UncontrolledAccordeon/UncontrolledAccordeon';
 
 
 function App() {
 
     let [ratingValue, setRatingValue] = useState<RatingValueType>(1);
     let [accordionCollapsed, setAccordionCollapsed] = useState<boolean>(false);
-    let [switchOn,setSwitchOn] = useState<boolean>(false)
+    let [switchOn,setSwitchOn] = useState<boolean>(false);
 
     return (
         <div>
-
-           hello
+            <UncontrolledAccordeon titleValue={'users'}/>
 
 
         </div>
